@@ -43,7 +43,6 @@
 <?php $__env->startSection('content'); ?>
     <?php echo $__env->make('frontend.section.hero-banner', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     <?php echo $__env->make('frontend.section.about', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-
     <?php echo $__env->make('frontend.section.brands', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     <style>
     @keyframes scroll {

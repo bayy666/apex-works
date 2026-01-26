@@ -50,6 +50,18 @@
 
             <!-- Right Side - Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
+                <?php $__currentLoopData = $navbarItems ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if(!$item->is_button): ?>
+                        
+                    
+                        <a href="<?php echo e($item->menu_url ?? '#'); ?>"
+                           <?php if($item->open_new_tab): ?> target="_blank" rel="noopener noreferrer" <?php endif; ?>
+                           class="text-sm font-medium tracking-wider text-gray-700 hover:text-gray-900 transition-colors <?php echo e(request()->is(trim($item->menu_slug, '/')) ? 'text-gray-900 font-semibold' : ''); ?>">
+                            <?php echo e(strtoupper($item->menu_label)); ?>
+
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                 <button @click="searchOpen = !searchOpen" class="flex items-center text-sm font-medium tracking-wider text-gray-700 hover:text-gray-900 transition-colors">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

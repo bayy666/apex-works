@@ -16,8 +16,8 @@
                 <img src="<?php echo e(('assets/images/hero/mobil1.jpg')); ?>" class="seq-img absolute w-full h-full object-contain opacity-0" style="z-index:5;" loading="lazy">
             </div>
         </div>
-        <h2 class="text-white text-4xl md:text-6xl font-bold mt-12 text-center tracking-tight text-reveal">Cinematic Scroll Animation</h2>
-        <p class="text-gray-300 text-lg mt-4 text-center max-w-2xl text-reveal">Scroll untuk melihat animasi produk secara sinematik, step by step, seperti website otomotif premium.</p>
+        <h2 class="text-white text-4xl md:text-6xl font-bold mt-12 text-center tracking-tight">Cinematic Scroll Animation</h2>
+        <p class="text-gray-300 text-lg mt-4 text-center max-w-2xl">Scroll untuk melihat animasi produk secara sinematik, step by step, seperti website otomotif premium.</p>
     </div>
 </section>
 
@@ -33,10 +33,10 @@
     <!-- Text Content Modern Layout -->
     <div class="absolute bottom-0 left-0 w-full flex flex-col md:flex-row justify-between items-end z-30 px-8 pb-12 gap-8">
         <div class="text-white max-w-xl mb-8 md:mb-0">
-            <h2 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg mb-4 text-reveal">Ready for electric<br>exploration</h2>
+            <h2 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg mb-4">Ready for electric<br>exploration</h2>
         </div>
         <div class="flex flex-col items-start md:items-end max-w-lg">
-            <p class="text-gray-200 text-lg mb-6 text-left md:text-right drop-shadow text-reveal">Dengan desain premium, efek parallax modern, dan hanya mobil (PNG) yang bergerak saat scroll. Background dan teks tetap statis, menonjolkan produk secara sinematik.</p>
+            <p class="text-gray-200 text-lg mb-6 text-left md:text-right drop-shadow">Dengan desain premium, efek parallax modern, dan hanya mobil (PNG) yang bergerak saat scroll. Background dan teks tetap statis, menonjolkan produk secara sinematik.</p>
             <a href="#" class="bg-white text-black font-semibold rounded-full px-8 py-3 shadow-lg hover:bg-gray-200 transition-all text-lg">Explore produk</a>
         </div>
     </div>
@@ -101,10 +101,10 @@
                         </svg>
                     </button>
                         <div class="mt-8 md:mt-0">
-                            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8 text-gray-900 tracking-tight uppercase text-reveal" style="font-family: 'Montserrat', Arial, sans-serif;">
+                            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8 text-gray-900 tracking-tight uppercase" style="font-family: 'Montserrat', Arial, sans-serif;">
                                 <span x-text="slide.headline"></span>
                             </h2>
-                            <p class="text-xl text-gray-800 mb-12 max-w-lg font-medium text-reveal" style="font-family: 'Montserrat', Arial, sans-serif;">
+                            <p class="text-xl text-gray-800 mb-12 max-w-lg font-medium" style="font-family: 'Montserrat', Arial, sans-serif;">
                                 <span x-text="slide.desc"></span>
                             </p>
                             <a :href="slide.link" class="inline-flex items-center group text-xl font-semibold text-gray-900 hover:text-red-600 transition-colors">
@@ -141,42 +141,6 @@
         </div>
     </div>
 </section>
-</section>
-
-<!-- Text Reveal Animation CSS & JS -->
-<style>
-.text-reveal {
-    opacity: 0;
-    transform: translateY(12px);
-    transition:
-        opacity 0.6s cubic-bezier(0.23,1,0.32,1),
-        transform 0.6s cubic-bezier(0.23,1,0.32,1);
-    will-change: opacity, transform;
-}
-.text-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const revealEls = Array.from(document.querySelectorAll('.text-reveal'));
-    if (!revealEls.length) return;
-    const stagger = 100; // ms, between 80–120ms
-    function revealOnScroll() {
-        let delay = 0;
-        revealEls.forEach((el, i) => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 32) {
-                setTimeout(() => el.classList.add('revealed'), delay);
-                delay += stagger;
-            }
-        });
-    }
-    window.addEventListener('scroll', revealOnScroll, { passive: true });
-    revealOnScroll();
-});
-</script>
 
 
 </section>
