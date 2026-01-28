@@ -39,6 +39,16 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('/kontak', 'submitKontak')->name('kontak.submit');
 });
 
+    // Route untuk halaman hero section
+    Route::get('/hero-section', function () {
+        return view('hero-section');
+    });
+
+    // Route untuk halaman about section
+    Route::get('/about-section', function () {
+        return view('about-section');
+    });
+
 /*
 |--------------------------------------------------------------------------
 | AUTH ROUTES
